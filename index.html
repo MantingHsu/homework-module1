@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Cliffs of California</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body id="home">
     <div class="container">
@@ -24,32 +23,81 @@
                 </nav>
             </div>
         </header>
-        <main>
-        <section id="home">
-            <h1>California's Greatest Cliffs</h1>
-            <p>The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff, and South Cliff are the pride of California. Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
-            <p>No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. 
-                West Cliff is the most popular among Westcliff University campus students because of its close proximity.</p>
-        <div class="cliff images">
-            <div class="cliff">
-                <h3>West Cliff</h3><br>
-                <img src="images d2/cliff-west-sea.jpeg" alt="West Cliff"><br>
-            </div>
-            <div class="cliff">
-                <h3>North Cliff</h3><br>
-                <img src="images d2/cliff-north-mountain.jpeg" alt="North Cliff">
-            </div>
-            <div class="cliff">
-                <h3>East Cliff</h3><br>
-                <img src="images d2/cliff-east-river.jpeg" alt="East Cliff">
-            </div>
-            <div class="cliff">
-                <h3>South Cliff</h3><br>
-                <img src="images d2/cliff-south-canyon.jpeg" alt="South Cliff">
-
-            </div>
+        <div class="header-container">
+            <div id="clock"></div>
         </div>
-        </section>
+        <script>
+            // Create a time data function
+            function currentTime() {
+                // Declare Variables
+                var d = new Date(); // Get current date
+                var hr = d.getHours(); // Get current hours
+                var min = d.getMinutes(); // Get current minutes 
+                var sec = d.getSeconds(); // Get current seconds
+                var ampm; // Declare empty variable to store AM or PM
+
+                // Add 0 to single digits for seconds
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+
+                // Add 0 to single digits for minutes 
+                if (min < 10) {
+                    min = "0" + min;
+                }
+
+                // Determine AM or PM string
+                if (hr == 12) {
+                    ampm = "PM"; // Set to PM 
+                } else if (hr > 12) {
+                    hr -= 12; // Deduct 12 from hours greater than 12 (military time)
+                    ampm = "PM"; // Set to PM
+                } else {
+                    ampm = "AM"; // Set to AM
+                }
+
+                // Assemble time format to display
+                var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+                // Display current local time on HTML element
+                document.getElementById("clock").innerHTML = "Your Current Local Time: " + time;
+
+                // Optional: Time Zone (You can implement a more precise time zone detection method)
+                const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+                document.getElementById("clock").innerHTML += " " + timeZone;
+            }
+
+            // Run time data function every 1 second 
+            setInterval(currentTime, 1000); // Setting timer 
+
+            // Initial run of time data function 
+            currentTime();
+        </script>
+        <main>
+            <section id="home">
+                <h1>California's Greatest Cliffs</h1>
+                <p>The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff, and South Cliff are the pride of California. Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
+                <p>No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. 
+                    West Cliff is the most popular among Westcliff University campus students because of its close proximity.</p>
+                <div class="cliff images">
+                    <div class="cliff">
+                        <h3>West Cliff</h3><br>
+                        <img src="images d2/cliff-west-sea.jpeg" alt="West Cliff"><br>
+                    </div>
+                    <div class="cliff">
+                        <h3>North Cliff</h3><br>
+                        <img src="images d2/cliff-north-mountain.jpeg" alt="North Cliff">
+                    </div>
+                    <div class="cliff">
+                        <h3>East Cliff</h3><br>
+                        <img src="images d2/cliff-east-river.jpeg" alt="East Cliff">
+                    </div>
+                    <div class="cliff">
+                        <h3>South Cliff</h3><br>
+                        <img src="images d2/cliff-south-canyon.jpeg" alt="South Cliff">
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div id="nondisclaimer">
@@ -61,8 +109,7 @@
                 </div>
             </div>
             <div id="disclaimer">
-                
-                <a href="https://facebook.com"><img src="images/facebook_icon.jpg"alt="facebook" width="30"></a>
+                <a href="https://facebook.com"><img src="images/facebook_icon.jpg" alt="facebook" width="30"></a>
                 <a href="https://instagram.com"><img src="images/instagram_logo.jpg" alt="Instagram" width="30"></a>
                 <a href="https://twitter.com"><img src="images/logo_of_twitter.jpg" alt="Twitter" width="30"></a>
 
@@ -70,63 +117,5 @@
             </div>
         </footer>
     </div>
-    <div id="clock"></div>
-    <script>
-        // Create a time data function
-        function currentTime(){
-            // Declare Variables
-            var d = new Date(); // Get current date
-            var hr = d.getHours(); // Get current hours
-            var min = d.getMinutes(); // Get current minutes 
-            var sec = d.getSeconds(); // Get current seconds
-            var ampm; // Declare empty variable to store AM or PM
-    
-            // Add 0 to single digits for seconds
-            if (sec < 10){
-                sec = "0" + sec;
-            }
-    
-            // Add 0 to single digits for minutes 
-            if (min < 10){
-                min = "0" + min;
-            }
-    
-            // Determine AM or PM string
-            if (hr == 12){
-                ampm = "PM"; // Set to PM 
-            } else if (hr > 12){
-                hr -= 12; // Deduct 12 from hours greater than 12 (military time)
-                ampm = "PM"; // Set to PM
-            } else {
-                ampm = "AM"; // Set to AM
-            }
-    
-            // Calculate time zone
-            const utcHours = d.getUTCHours();
-            const timeDiff = hr - utcHours;
-            const adjTimeDiff = (timeDiff + 24) % 24; // Adjusted time difference to positive number
-            let timeZone = "";
-    
-            if (adjTimeDiff === 0 || adjTimeDiff === 24) timeZone = "GMT";
-            else if (adjTimeDiff === 1 || adjTimeDiff === 2) timeZone = "CET"; // Central European Time
-            else if (adjTimeDiff === -5 || adjTimeDiff === 19) timeZone = "ET"; // Eastern Time
-            else if (adjTimeDiff === -6 || adjTimeDiff === 18) timeZone = "CT"; // Central Time
-            else if (adjTimeDiff === -7 || adjTimeDiff === 17) timeZone = "MT"; // Mountain Time
-            else if (adjTimeDiff === -8 || adjTimeDiff === 16) timeZone = "PT"; // Pacific Time
-    
-            // Assemble time format to display
-            var time = hr + ":" + min + ":" + sec + " " + ampm;
-            
-            // Display current local time and time zone on HTML elements
-            document.getElementById("clock").innerHTML = time + '<span class="time-zone">' + timeZone + '</span>';
-        }
-        
-        // Run time data function every 1 second 
-        setInterval(currentTime, 1000); // Setting timer 
-    
-        // Initial run of time data function 
-        currentTime();
-    </script>      
 </body>
 </html>
-
