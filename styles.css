@@ -108,7 +108,23 @@ header {
     margin: 1em auto;
     line-height: 1.6;
 }
+#cliffs {
+    padding: 5em 0;
+}
 
+#cliffs h1 {
+    padding-bottom: 20px;
+    font-size: 2.5em;
+    color: #9ed034;
+}
+
+#cliffs p {
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 1em auto;
+    line-height: 1.6;
+}
 /* Cliff Images */
 .cliff{
     display: grid; 
@@ -148,6 +164,11 @@ header {
 
 /* Specific Header Background for Different Pages */
 #home header {
+    background: no-repeat lightgrey url('images d2/cliff_ocean.jpg');
+    background-size: cover; 
+}
+
+#cliffs header {
     background: no-repeat lightgrey url('images d2/cliff_ocean.jpg');
     background-size: cover; 
 }
