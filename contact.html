@@ -47,18 +47,76 @@
                         <input type="email" id="email" name="email" value="johndoe@gmail.com" required>
                         <label for="phone">Phone:</label>
                         <input type="tel" id="phone" name="phone" value="xxx-xxx-xxxx" required>
-                        <label>How should we contact you?</label>
-                        <input type="radio" id="email_contact" name="contact_method" value="Email" checked>
-                        <label for="email_contact">Email</label>
-                        <input type="radio" id="phone_contact" name="contact_method" value="Phone">
-                        <label for="phone_contact">Phone</label>
+                
+                        <label for="contact_method">How should we contact you?</label>
+                        <select id="contact_method" name="contact_method">
+                            <option value="">Select One</option>
+                            <option value="email_contact">Email</option>
+                            <option value="phone_contact">Phone</option>
+                        </select>
+                
+                        <div id="email_contact_input" class="contact-input" style="display: none;">
+                            <label for="email_detail">Your Email:</label>
+                            <input type="email" id="email_detail" name="email_detail">
+                        </div>
+                
+                        <div id="phone_contact_input" class="contact-input" style="display: none;">
+                            <label for="phone_detail">Your Phone Number:</label>
+                            <input type="tel" id="phone_detail" name="phone_detail">
+                        </div>
+                
                         <label for="cliff_types">Which Cliff are you inquiring about?</label>
                         <select id="cliff_types" name="cliff_types">
-                            <option value="West Cliff">West Cliff</option>
-                            <option value="North Cliff">North Cliff</option>
-                            <option value="East Cliff">East Cliff</option>
-                            <option value="South Cliff">South Cliff</option>
+                            <option value="" id="instruction">Select a Cliff</option>
+                            <option value="west_cliff" id="west_cliff_option">West Cliff</option>
+                            <option value="north_cliff" id="north_cliff_option">North Cliff</option>
+                            <option value="east_cliff" id="east_cliff_option">East Cliff</option>
+                            <option value="south_cliff" id="south_cliff_option">South Cliff</option>
                         </select>
+                
+                        <div id="west_cliff_input" class="cliff-input" style="display: none;">
+                            <label for="west_cliff_detail">Details for West Cliff:</label>
+                            <input type="text" id="west_cliff_detail" name="west_cliff_detail">
+                        </div>
+                
+                        <div id="north_cliff_input" class="cliff-input" style="display: none;">
+                            <label for="north_cliff_detail">Details for North Cliff:</label>
+                            <input type="text" id="north_cliff_detail" name="north_cliff_detail">
+                        </div>
+                
+                        <div id="east_cliff_input" class="cliff-input" style="display: none;">
+                            <label for="east_cliff_detail">Details for East Cliff:</label>
+                            <input type="text" id="east_cliff_detail" name="east_cliff_detail">
+                        </div>
+                
+                        <div id="south_cliff_input" class="cliff-input" style="display: none;">
+                            <label for="south_cliff_detail">Details for South Cliff:</label>
+                            <input type="text" id="south_cliff_detail" name="south_cliff_detail">
+                        </div>
+                
+                        <label for="contact_reason">Reason for Contact:</label>
+                        <select id="contact_reason" name="contact_reason">
+                            <option value="">Select One</option>
+                            <option value="general_inquiry">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                
+                        <div id="general_inquiry_input" class="contact-input" style="display: none;">
+                            <label for="general_inquiry_detail">General Inquiry Details:</label>
+                            <input type="text" id="general_inquiry_detail" name="general_inquiry_detail">
+                        </div>
+                
+                        <div id="support_input" class="contact-input" style="display: none;">
+                            <label for="support_detail">Support Details:</label>
+                            <input type="text" id="support_detail" name="support_detail">
+                        </div>
+                
+                        <div id="feedback_input" class="contact-input" style="display: none;">
+                            <label for="feedback_detail">Feedback Details:</label>
+                            <input type="text" id="feedback_detail" name="feedback_detail">
+                        </div>
+                
                         <div class="commentbox">
                             <label for="referral_source">How did you hear about us:</label>
                             <textarea id="referral_source" name="referral_source" rows="5" cols="30"></textarea>
@@ -75,7 +133,7 @@
                         </div>
                     </fieldset>  
                 </form>
-            </section>
+ </section>
         </main>
         <section>
             <ul id="partners">
@@ -125,5 +183,7 @@
     <script src="js/site_scripts.js"></script>
     <!-- Random Codes -->
     <script src="js/randomcodes.js"></script>
+        <!-- Select Handler -->
+        <script src="js/selectHandler.js"></script>
 </body>
 </html>
