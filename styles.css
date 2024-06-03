@@ -183,11 +183,81 @@ header {
     background-size: cover; 
 }
 
+/* Partners */
+#partners {
+    width: 100%;
+    background-color: #4288c3;
+    padding: 2em 0;
+    text-align: center;
+}
+
+#partners .partner {
+    display: inline-block;
+    margin: 0 1em;
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#partners .partner img {
+    width: 90px;
+    height: 90px;
+}
+
 /* Footer */
 footer {
-    background: #4977D1;
+    width: 100%;
+    background-color: #ecfab8;
+    padding-top: 1em;
+    text-align: center;
+}
+
+footer #nondisclaimer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+footer #nondisclaimer .copy {
+    font-size: 0.9em;
+}
+
+footer #nondisclaimer .social {
+    font-size: 0.9em;
+}
+
+footer #disclaimer {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #ecfab8;
+    font-size: 0.85em;
+}
+
+footer .social-icons {
+    margin: 0.5em 0;
+}
+
+footer .social-icons a {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 10px; /* Increased margin for better spacing */
+    border-radius: 50%;
     color: white;
-    padding: 1em 0;
+}
+
+footer .social-icons .fa-facebook {
+    background: #3b5988;
+}
+
+footer .social-icons .fa-twitter {
+    background: #55acee;
+}
+
+footer .social-icons .fa-instagram {
+    background: #e4405f;
 }
 
 /* Activities */
@@ -304,4 +374,6 @@ input[type="submit"]:hover {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
