@@ -38,7 +38,7 @@
                 <p>(800) GCLIFFS</p>
                 <h2>Email:</h2>
                 <p>info@greatcliffs.com</p>
-                <form action="/signup" method="post"> 
+                <form action="/signup" method="post" class="form-container"> 
                     <fieldset>  
                         <legend>Contact Form</legend>
                         <label for="name">Name:</label>
@@ -59,9 +59,20 @@
                             <option value="East Cliff">East Cliff</option>
                             <option value="South Cliff">South Cliff</option>
                         </select>
-                        <label for="referral_source">How did you hear about us:</label>
-                        <textarea id="referral_source" name="referral_source" rows="5" cols="30"></textarea>
-                        <input type="submit" value="Inquire">
+                        <div class="commentbox">
+                            <label for="referral_source">How did you hear about us:</label>
+                            <textarea id="referral_source" name="referral_source" rows="5" cols="30"></textarea>
+                        </div>
+                        <div class="randomcode-container">
+                            <label for="verificationInput">Enter characters:</label>
+                            <div class="randomcode">
+                                <input type="text" id="verificationInput" maxlength="8" placeholder="Enter characters">
+                                <span id="generatedCode"></span>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" id="submit" value="Inquire" disabled>
+                        </div>
                     </fieldset>  
                 </form>
             </section>
@@ -108,52 +119,11 @@
             </div>
         </footer>
     </div>
-    <script>
-        // Create a time data function
-        function currentTime() {
-            // Declare Variables
-            var d = new Date(); // Get current date
-            var hr = d.getHours(); // Get current hours
-            var min = d.getMinutes(); // Get current minutes 
-            var sec = d.getSeconds(); // Get current seconds
-            var ampm; // Declare empty variable to store AM or PM
-
-            // Add 0 to single digits for seconds
-            if (sec < 10) {
-                sec = "0" + sec;
-            }
-
-            // Add 0 to single digits for minutes 
-            if (min < 10) {
-                min = "0" + min;
-            }
-
-            // Determine AM or PM string
-            if (hr == 12) {
-                ampm = "PM"; // Set to PM 
-            } else if (hr > 12) {
-                hr -= 12; // Deduct 12 from hours greater than 12 (military time)
-                ampm = "PM"; // Set to PM
-            } else {
-                ampm = "AM"; // Set to AM
-            }
-
-            // Assemble time format to display
-            var time = hr + ":" + min + ":" + sec + " " + ampm;
-
-            // Display current local time on HTML element
-            document.getElementById("clock").innerHTML = "Your Current Local Time: " + time;
-
-            // Optional: Time Zone (You can implement a more precise time zone detection method)
-            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            document.getElementById("clock").innerHTML += " " + timeZone;
-        }
-
-        // Run time data function every 1 second 
-        setInterval(currentTime, 1000); // Setting timer 
-
-        // Initial run of time data function 
-        currentTime();
-    </script>
+    <!-- New link to the digital clock script -->
+    <script src="js/digclock.js"></script>
+    <!-- Partners -->
+    <script src="js/site_scripts.js"></script>
+    <!-- Random Codes -->
+    <script src="js/randomcodes.js"></script>
 </body>
 </html>
