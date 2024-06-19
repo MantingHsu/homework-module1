@@ -420,7 +420,7 @@ input[type="submit"]:hover {
 }
 /* Highlighted state for selected cells */
 .highlighted {
-    background-color: yellow;
+    background-color: #9ed034;
 }
 
 /* Add this to prevent pointer cursor on not-selectable cells */
