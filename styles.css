@@ -418,3 +418,12 @@ input[type="submit"]:hover {
 .form-container > * {
     width: 100%;
 }
+/* Highlighted state for selected cells */
+.highlighted {
+    background-color: yellow;
+}
+
+/* Add this to prevent pointer cursor on not-selectable cells */
+.not-selectable {
+    cursor: not-allowed;
+}
