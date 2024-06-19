@@ -427,3 +427,23 @@ input[type="submit"]:hover {
 .not-selectable {
     cursor: not-allowed;
 }
+
+#selected-activities-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+#selected-activities-box h2 {
+    margin-top: 0;
+}
+
+#selected-activities-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-activities-list li {
+    padding: 5px 0;
+}
